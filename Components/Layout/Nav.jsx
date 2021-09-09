@@ -7,6 +7,13 @@ import Logo from '../../public/assets/Logo.png'
 import { NavData } from './Nav.data'
 import { color,FontSize } from '../../styles/Staticstyle'
 import Button from '../Util/Button'
+const Container = styled.div`
+  width: 100vw;
+  background-color: white;
+  z-index: 99;
+  position: sticky;
+  top: 0;
+`;
 
 const NavWrapper = styled.nav`
   max-width: 1300px;
@@ -17,6 +24,7 @@ const NavWrapper = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center ;
+
 `
 const LogoWrapper = styled(Link)`
 
@@ -48,31 +56,33 @@ const LinkWrapper = styled(Link)`
 
 const Nav = () => {
   return (
-    <NavWrapper>
-      <LogoWrapper href="/">
-        <a>
-          <Image src={Logo} alt="ON Room Main Rogo" />
-        </a>
-      </LogoWrapper>
-      <NavLinkWrapper>
-        <ul>
-          {NavData.map((data, index) => {
-            const { name, subtitle } = data;
-            return (
-              <li key={index}>
-                <LinkWrapper href={data.Link}>
-                  <a>
-                    {name} <br /> <span>{subtitle}</span>
-                  </a>
-                </LinkWrapper>
-              </li>
-            );
-          })}
-        </ul>
-      </NavLinkWrapper>
-      <Button text="Login" />
-      <Button text="Register" black />
-    </NavWrapper>
+    <Container>
+      <NavWrapper>
+        <LogoWrapper href="/">
+          <a>
+            <Image src={Logo} alt="ON Room Main Rogo" />
+          </a>
+        </LogoWrapper>
+        <NavLinkWrapper>
+          <ul>
+            {NavData.map((data, index) => {
+              const { name, subtitle } = data;
+              return (
+                <li key={index}>
+                  <LinkWrapper href={data.Link}>
+                    <a>
+                      {name} <br /> <span>{subtitle}</span>
+                    </a>
+                  </LinkWrapper>
+                </li>
+              );
+            })}
+          </ul>
+        </NavLinkWrapper>
+        <Button text="Login" />
+        <Button text="Register" black />
+      </NavWrapper>
+    </Container>
   );
 }
 

@@ -8,6 +8,7 @@ import { NavData } from './Nav.data';
 const FooterWrapper = styled.div`
   max-width: 1300px;
   margin: 0 auto;
+  padding: 5rem 0rem 5rem 0rem;
   .Container {
     width: 100%;
     .copyright{

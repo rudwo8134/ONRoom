@@ -9,5 +9,7 @@ export const FontSize={
   NavsubFont:"0.9rem",
   FooterFont: "1.0rem",
   FootersubFont: "0.8rem",
-  ButtonFont:"0.9rem"
+  ButtonFont:"0.9rem",
+  MainFont: "2.5rem"
 }
+

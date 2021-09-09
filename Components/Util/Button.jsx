@@ -12,6 +12,7 @@ const ButtonWrapper = styled.div`
   background-color: ${color.MainColor};
   color:${({black})=> black ? "#222": "#fff"};
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
   &:hover {
     background-color: transparent;
     border: 1px solid ${color.MainColor};
