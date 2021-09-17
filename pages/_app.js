@@ -1,7 +1,10 @@
 import Layout from '../Components/Layout/Layout'
 import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
+
+function MyApp(props) {
+  const { pageProps, Component } = props;
+  console.log(props)
   return (
     <>
       <Layout>
@@ -11,4 +14,8 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp
+
+
+
+
+export default MyApp;
